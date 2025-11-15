@@ -114,7 +114,7 @@ def parse_class_page(html: str, cls_code: str):
             # attach helpers the UI expects
             row["_team"] = team_name
             row["_team_display"] = team_display
-            row["_class"] = (row.get("Class") or cls_code)
+            row["_class"] = cls_code
 
             # skip blank-ish rows
             if not any(v and v != "-" for v in row.values()):
